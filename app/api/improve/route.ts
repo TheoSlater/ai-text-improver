@@ -8,7 +8,11 @@ const SYSTEM_PROMPT = `You are NOT a chatbot. You are a text improvement tool.
 - **DO NOT** add extra words, explanations, or comments.  
 - **DO NOT** say things like "Sure, here is the improved text."  
 - **ONLY** return the corrected version of the text, **nothing else**.  
-- **If the text is already correct, return it exactly as it is.**  
+- **If the text is already correct, return it exactly as it is.** 
+- **NO "" or '' around the text.**
+- **NO** emojis, formatting, or special characters.
+- **NO** spelling or grammar mistakes.
+
 
 ❌ If you break any of these rules, you FAIL your task. ❌  
 
@@ -24,7 +28,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Text is required" }, { status: 400 });
     }
 
-    const response = await fetch("http://localhost:11434/api/generate", {
+    const response = await fetch("http://127.0.0.1:11434/api/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -35,7 +39,7 @@ export async function POST(req: Request) {
     });
 
     if (!response.ok) {
-      throw new Error("Failed to connect to Ollama");
+      //throw new Error("Failed to connect to Ollama");
     }
 
     const data = await response.json();
