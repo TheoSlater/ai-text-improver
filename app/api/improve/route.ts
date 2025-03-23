@@ -32,7 +32,7 @@ export async function POST(req: Request) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        model: "tonycuizx/text1",
+        model: "tonycuizx/text1", // tonycuizx/text1
         prompt: SYSTEM_PROMPT.replace("{text}", text),
         stream: false,
       }),

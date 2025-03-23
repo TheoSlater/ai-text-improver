@@ -66,7 +66,7 @@ export const theme = createTheme({
     MuiPaper: {
       styleOverrides: {
         root: {
-          backgroundColor: "rgba(255, 255, 255, 0.05)",
+          backgroundColor: "rgba(209, 185, 185, 0.05)",
           backdropFilter: "blur(20px)",
           borderRadius: 8,
           boxShadow: "0 4px 30px rgba(0, 0, 0, 0.2)",
@@ -79,7 +79,7 @@ export const theme = createTheme({
         root: {
           "& .MuiOutlinedInput-root": {
             backgroundColor: "rgba(255, 255, 255, 0.07)",
-            borderRadius: 8,
+            borderRadius: 18,
             "& fieldset": { borderColor: "rgba(255, 255, 255, 0.2)" },
             "&:hover fieldset": { borderColor: "#4C5DF9" },
             "&.Mui-focused fieldset": { borderColor: "#2D3BF0" },

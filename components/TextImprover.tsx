@@ -7,7 +7,7 @@ export default function TextImprover() {
 
   return (
     <Paper sx={{ flex: 1, p: 4, borderRadius: 2, boxShadow: 3 }}>
-      <Typography variant="h6" sx={{ mb: 3 }}>Input Text (For Improvement)</Typography>
+      <Typography variant="h6" sx={{ mb: 3 }}>Input Text</Typography>
       <TextField
         fullWidth
         multiline
